@@ -29,7 +29,7 @@
             <a class="nav-link" href="./index.html">Home <span class="sr-only">(página atual)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./page1.html">Pag1</a>
+            <a class="nav-link" href="./test.html">Pag1</a>
           </li>
           <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,20 +42,32 @@
             </div>
           </li>
         </ul>
-        <!--<form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Google" aria-label="Pesquisar">
-          <button class="btn btn-success badge-pill my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>-->
       </div>
     </nav>
   </header>
 
   <main>
     <h1>Pagina 1</h1>
+    <div class="container">
+      <div id="game" class="justify-center flex-column">
+        <div id="hud">
+          <div id="hud-item">
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
+          </div>
+        </div>
+        
+        <h2 id="question">What is the answer to this questions?</h2>
+          <div class="choice-container">
+            <p class="choice-text" data-number="1">Choice 1</p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-text" data-number="2">Choice 2</p>
+          </div>
+      </div>
+    </div>
   </main>
-
-
-
 
   <script src="./script.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

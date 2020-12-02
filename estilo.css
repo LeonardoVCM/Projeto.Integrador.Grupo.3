@@ -1,6 +1,7 @@
 #corpo {
   background-color: aliceblue;
-  /* background-image: url(Proposta.ImgFundo.jpg); */
+  /*background-image: url(./img/fundo.jpg);
+    background-image: url(Proposta.ImgFundo.jpg); */
   background-size: cover;
 }
 #logoprincipal {

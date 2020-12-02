@@ -20,6 +20,10 @@
   display: block;
 }
 
+.btn {
+  font-size: 30px;
+}
+
 h1 {
   /* margin-left: 42%; */
   display: flex;
@@ -47,14 +51,66 @@ h1 {
 p.inicio{
   font-size: 25px;
   text-align: center; 
-  font-family: "Indie Flower";
+  font-family: 'Courier New', Courier, monospace ;
 }
 
 .bUm{
-  margin-left: 46%;
-  display: inline-block;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Indie Flower";
+  font-family: 'Courier New', Courier, monospace ;
   /* border-radius: 20px; */
+}
+
+/*CSS para a pagina do QUIZ*/
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#game{
+  width: 80vw;
+}
+
+h2#question {
+  display: block;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 40%;
+  font-size: 32px;
+  background-color: rgba(5, 80, 151, 0.815);
+}
+
+.choice-container {
+  display: block;
+  font-family: 'Courier New', Courier, monospace ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 60%;
+  font-size: 1.8rem;
+  background-color: rgba(5, 80, 151, 0.815);
+}
+
+.choice-container:hover {
+cursor: pointer;
+box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
+transform: translateY(-0.1rem);
+transition: transform 150ms;
+}
+
+.choice-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 60%;
+}
+
+#hud {
+  visibility: hidden;
 }

@@ -22,15 +22,15 @@ let questions = [
     {
         question: "Gosta de jogar?",
         choice1: "Não;",
-        choice2: "Razoavelmente;",
+        //choice2: "Razoavelmente;",
         choice3: "Muito.",
         answer: 1,
     },
     {
         question: "Vídeos e séries?",
         choice1: "Não;",
-        choice2: "As vezes;",
-        choice3: "Definitivamente sim.",
+        //choice2: "As vezes;",
+        choice: "Definitivamente sim.",
         answer: 1,
     },
 ];
@@ -44,22 +44,47 @@ startGame = () => {
     getNewQuestion();
 };
 
+
 getNewQuestion = () => {
     if (availableQuesions.length === 0) {
-        if (score == 0) {
-            alert("You are THE FULL MOON, congratulations.");
+        if (score == 10) {
+            alert("#");
+            return window.location.assign('d0.html');
         }
-        if (score == 1) {
-            alert("You are THE RISING MOON, congratulations.");
+        if (score == 11) {
+            alert("#");
+            return window.location.assign('d0.html');
         }
-        if (score == 2) {
-            alert("You are THE RISING SUN, congratulations.");
+        if (score == 12) {
+            alert("#");
+            return window.location.assign('d0.html');
         }
-        if (score == 3) {
-            alert("You are THE MIDDAY SUN, congratulations.");
+        if (score == 20) {
+            alert("#");
+            return window.location.assign('d1.html');
+        }
+        if (score == 21) {
+            alert("#");
+            return window.location.assign('d1.html');
+        }
+        if (score == 22) {
+            alert("#");
+            return window.location.assign('d1.html');
+        }
+        if (score == 30) {
+            alert("#");
+            return window.location.assign('d2.html');
+        }
+        if (score == 31) {
+            alert("#");
+            return window.location.assign('d2.html');
+        }
+        if (score == 33) {
+            alert("#");
+            return window.location.assign('d2.html');
         }
 
-        return window.location.assign('answer.html');
+        
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);

@@ -10,6 +10,10 @@
  margin-top: -10px;
 }
 
+.navbar-brand {
+  margin-right: 0px;
+}
+
 /* .row.text-center {    
   display: block;
 } */

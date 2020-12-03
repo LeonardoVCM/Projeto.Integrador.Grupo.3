@@ -22,15 +22,15 @@ let questions = [
     {
         question: "Gosta de jogar?",
         choice1: "Não;",
-        //choice2: "Razoavelmente;",
+        choice2: "Razoavelmente;",
         choice3: "Muito.",
         answer: 1,
     },
     {
         question: "Vídeos e séries?",
         choice1: "Não;",
-        //choice2: "As vezes;",
-        choice: "Definitivamente sim.",
+        choice2: "As vezes;",
+        choice3: "Definitivamente sim.",
         answer: 1,
     },
 ];

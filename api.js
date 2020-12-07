@@ -7,3 +7,4 @@ fetch(`https://api.mercadolibre.com/sites/MLA/search?q=motorola`)
     .then(response => {
         modelo = response.title;
         preco = response.price;
+    })

@@ -17,25 +17,46 @@ let questions = [
         choice1: "Menos de R$1000;",
         choice2: "Um pouco mais de R$1000;",
         choice3: "O céu é o limite.",
-        answer: 1,
+        answer10: 1,
+        answer20: 2,
+        answer30: 3,
     },
     {
         question: "Gosta de jogar?",
         choice1: "Não;",
-        choice2: "Razoavelmente;",
+        choice2: "As vezes;",
         choice3: "Muito.",
-        answer: 1,
+        answer1: 1,
+        answer2: 2,
+        answer3: 3,
     },
     {
         question: "Vídeos e séries?",
         choice1: "Não;",
         choice2: "As vezes;",
-        choice3: "Definitivamente sim.",
-        answer: 1,
+        choice3: "Muito.",
+        answer4: 1,
+        answer5: 2,
+        answer6: 3,
     },
 ];
 
-const BONUS = 1;
+// Valores para Barato, Intermediario e Caro
+const BONUS10 = 10;
+const BONUS20 = 40;
+const BONUS30 = 80;
+
+// Valores para jogo
+const BONUS0 = 0;
+const BONUS1 = 1;
+const BONUS2 = 3;
+
+//Valores para Video
+
+//const BONUS3 = 3;
+const BONUS4 = 6;
+const BONUS5 = 7;
+
 
 startGame = () => {
     questionCounter = 0;
@@ -47,40 +68,43 @@ startGame = () => {
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0) {
+        //BARATO
         if (score == 10) {
-            alert("#");
+            alert("#Geral Barato");
             return window.location.assign('d0.html');
         }
-        if (score == 11) {
-            alert("#");
+        if (score == 13 || score == 19 || score == 20) {
+            alert("Jogo Barato");
             return window.location.assign('d0.html');
         }
-        if (score == 12) {
-            alert("#");
+        if (score == 17 || score == 18) {
+            alert("Video Barato");
             return window.location.assign('d0.html');
         }
-        if (score == 20) {
-            alert("#");
+        //MEDIO
+        if (score == 40) {
+            alert("Geral Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 21) {
-            alert("#");
+        if (score == 43 || score == 49 || score == 50) {
+            alert("Jogo Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 22) {
-            alert("#");
+        if (score == 47 || score == 48) {
+            alert("Video Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 30) {
-            alert("#");
+        //CARO
+        if (score == 80) {
+            alert("Geral Caro");
             return window.location.assign('d2.html');
         }
-        if (score == 31) {
-            alert("#");
+        if (score == 83 || score == 89 || score == 90) {
+            alert("Jogo Caro");
             return window.location.assign('d2.html');
         }
-        if (score == 33) {
-            alert("#");
+        if (score == 87 || score == 88) {
+            alert("Video Caro");
             return window.location.assign('d2.html');
         }
 
@@ -107,14 +131,73 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+        
+        // VALIDAÇÃO PARA BARATO, MEDIO E CARO
+        const classToApply10 = selectedAnswer == currentQuestion.answer10 ? "correct10" : "incorrect" ;
 
-        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-
-        if (classToApply === "correct") {
-            incrementScore(BONUS);
+        if (classToApply10 === "correct10") {
+            incrementScore(BONUS10);
         }
 
-        selectedChoice.parentElement.classList.add(classToApply);
+        const classToApply20 = selectedAnswer == currentQuestion.answer20 ? "correct20" : "incorrect" ;
+
+        if (classToApply20 === "correct20") {
+            incrementScore(BONUS20);
+        }
+
+        const classToApply30 = selectedAnswer == currentQuestion.answer30 ? "correct30" : "incorrect" ;
+
+        if (classToApply30 === "correct30") {
+            incrementScore(BONUS30);
+        }
+
+        //VALIDAÇÃO PARA JOGO
+        const classToApply0 = selectedAnswer == currentQuestion.answer1 ? "correct0" : "incorrect" ;
+
+        if (classToApply0 === "correct0") {
+            incrementScore(BONUS0);
+        }
+
+        const classToApply1 = selectedAnswer == currentQuestion.answer2 ? "correct1" : "incorrect" ;
+
+        if (classToApply1 === "correct1") {
+            incrementScore(BONUS1);
+        }
+
+        const classToApply2 = selectedAnswer == currentQuestion.answer3 ? "correct2" : "incorrect" ;
+
+        if (classToApply2 === "correct2") {
+            incrementScore(BONUS2);
+        }
+
+        //VALIDAÇÃO PARA VIDEO
+        const classToApply3 = selectedAnswer == currentQuestion.answer4 ? "correct3" : "incorrect" ;
+
+        if (classToApply3 === "correct3") {
+            incrementScore(BONUS0);
+        }
+
+        const classToApply4 = selectedAnswer == currentQuestion.answer5 ? "correct4" : "incorrect" ;
+
+        if (classToApply4 === "correct4") {
+            incrementScore(BONUS4);
+        }
+
+        const classToApply5 = selectedAnswer == currentQuestion.answer6 ? "correct5" : "incorrect" ;
+
+        if (classToApply5 === "correct5") {
+            incrementScore(BONUS5);
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply10);
+        selectedChoice.parentElement.classList.add(classToApply20);
+        selectedChoice.parentElement.classList.add(classToApply30);
+        selectedChoice.parentElement.classList.add(classToApply0);
+        selectedChoice.parentElement.classList.add(classToApply1);
+        selectedChoice.parentElement.classList.add(classToApply2);
+        selectedChoice.parentElement.classList.add(classToApply3);
+        selectedChoice.parentElement.classList.add(classToApply4);
+        selectedChoice.parentElement.classList.add(classToApply5);
 
         getNewQuestion();
     });

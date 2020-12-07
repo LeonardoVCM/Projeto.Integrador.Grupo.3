@@ -14,27 +14,27 @@ let availableQuesions = [];
 let questions = [
     {
         question: "Quanto pretende gastar?",
-        choice1: "Menos de R$1000;",
-        choice2: "Um pouco mais de R$1000;",
-        choice3: "O céu é o limite.",
+        choice1: "Menos de R$1000",
+        choice2: "Um pouco mais de R$1000",
+        choice3: "O céu é o limite",
         answer10: 1,
         answer20: 2,
         answer30: 3,
     },
     {
         question: "Gosta de jogar?",
-        choice1: "Não;",
-        choice2: "As vezes;",
-        choice3: "Muito.",
+        choice1: "Não",
+        choice2: "Às vezes",
+        choice3: "Muito",
         answer1: 1,
         answer2: 2,
         answer3: 3,
     },
     {
         question: "Vídeos e séries?",
-        choice1: "Não;",
-        choice2: "As vezes;",
-        choice3: "Muito.",
+        choice1: "Não",
+        choice2: "Às vezes",
+        choice3: "Muito",
         answer4: 1,
         answer5: 2,
         answer6: 3,
@@ -70,14 +70,14 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0) {
         //BARATO
         if (score == 10) {
-            alert("#Geral Barato");
+            alert("Geral Barato")
             return window.location.assign('d0.html');
-        }
-        if (score == 13 || score == 19 || score == 20) {
+            }
+        if (score == 11 || score == 13 || score == 19 || score == 20) {
             alert("Jogo Barato");
             return window.location.assign('d0.html');
         }
-        if (score == 17 || score == 18) {
+        if (score == 16 || score == 17 || score == 18) {
             alert("Video Barato");
             return window.location.assign('d0.html');
         }
@@ -86,11 +86,11 @@ getNewQuestion = () => {
             alert("Geral Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 43 || score == 49 || score == 50) {
+        if (score == 41 || score == 43 || score == 49 || score == 50) {
             alert("Jogo Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 47 || score == 48) {
+        if (score == 46 || score == 47 || score == 48) {
             alert("Video Medio");
             return window.location.assign('d1.html');
         }
@@ -99,11 +99,11 @@ getNewQuestion = () => {
             alert("Geral Caro");
             return window.location.assign('d2.html');
         }
-        if (score == 83 || score == 89 || score == 90) {
+        if (score == 81 || score == 83 || score == 89 || score == 90) {
             alert("Jogo Caro");
             return window.location.assign('d2.html');
         }
-        if (score == 87 || score == 88) {
+        if (score == 86 || score == 87 || score == 88) {
             alert("Video Caro");
             return window.location.assign('d2.html');
         }

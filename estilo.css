@@ -116,10 +116,6 @@ transition: transform 150ms;
   width: 60%;
 }
 
-#hud {
- 
-}
-
 #score {
   display: none; 
 }

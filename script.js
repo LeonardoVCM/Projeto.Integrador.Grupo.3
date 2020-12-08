@@ -70,42 +70,42 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0) {
         //BARATO
         if (score == 10) {
-            alert("Geral Barato")
-            return window.location.assign('d0.html');
+            //alert("Geral Barato")
+            document.getElementById("gb").removeAttribute("style"); 
         }
         if (score ==  11 || score == 13 || score == 19 || score == 20) {
-            alert("Jogo Barato");
-            return window.location.assign('d0.html');
+            //alert("Jogo Barato");
+            document.getElementById("jb").removeAttribute("style"); 
         }
         if (score == 16 || score == 17 || score == 18) {
-            alert("Video Barato");
-            return window.location.assign('d0.html');
+            //alert("Video Barato");
+            document.getElementById("vb").removeAttribute("style"); 
         }
         //MEDIO
         if (score == 40) {
-            alert("Geral Medio");
-            return window.location.assign('d1.html');
+            //alert("Geral Medio");
+            document.getElementById("gm").removeAttribute("style"); 
         }
         if (score == 41 || score == 43 || score == 49 || score == 50) {
-            alert("Jogo Medio");
-            return window.location.assign('d1.html');
+            //alert("Jogo Medio");
+            document.getElementById("jm").removeAttribute("style"); 
         }
         if (score == 46 || score == 47 || score == 48) {
-            alert("Video Medio");
-            return window.location.assign('d1.html');
+            //alert("Video Medio");
+            document.getElementById("vm").removeAttribute("style"); 
         }
         //CARO
         if (score == 80) {
-            alert("Geral Caro");
-            return window.location.assign('d2.html');
+            //alert("Geral Caro");
+            document.getElementById("gc").removeAttribute("style"); 
         }
         if (score == 81 || score == 83 || score == 89 || score == 90) {
-            alert("Jogo Caro");
-            return window.location.assign('d2.html');
+            //alert("Jogo Caro");
+            document.getElementById("jc").removeAttribute("style"); 
         }
         if (score == 86 || score == 87 || score == 88) {
-            alert("Video Caro");
-            return window.location.assign('d2.html');
+            //alert("Video Caro");
+            document.getElementById("vc").removeAttribute("style"); 
         }
 
         

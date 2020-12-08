@@ -73,7 +73,7 @@ getNewQuestion = () => {
             alert("#Geral Barato");
             return window.location.assign('d0.html');
         }
-        if (score == 13 || score == 19 || score == 20) {
+        if (score ==  11 || score == 13 || score == 19 || score == 20) {
             alert("Jogo Barato");
             return window.location.assign('d0.html');
         }
@@ -86,7 +86,7 @@ getNewQuestion = () => {
             alert("Geral Medio");
             return window.location.assign('d1.html');
         }
-        if (score == 43 || score == 49 || score == 50) {
+        if (score == 41 || score == 43 || score == 49 || score == 50) {
             alert("Jogo Medio");
             return window.location.assign('d1.html');
         }
@@ -99,7 +99,7 @@ getNewQuestion = () => {
             alert("Geral Caro");
             return window.location.assign('d2.html');
         }
-        if (score == 83 || score == 89 || score == 90) {
+        if (score == 81 || score == 83 || score == 89 || score == 90) {
             alert("Jogo Caro");
             return window.location.assign('d2.html');
         }

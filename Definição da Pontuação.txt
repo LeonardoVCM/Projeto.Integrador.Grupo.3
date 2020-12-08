@@ -1,0 +1,84 @@
+Gosta de JOGAR
+
+Não -> 0
+
+As vezes-> 1
+
+Muito -> 3
+
+Gosta de ver VIDEOS
+
+Não -> 0
+
+As vezes-> 6
+
+Muito -> 7
+
+ JOGAR | VIDEOS |  Resp do Quiz      | Codigo Numerico
+  Não	  Não    =  Utilização Geral    _ + 0 + 0
+As vez    Não    =  Jogo                _ + 1 + 0
+ Muito    Não    =  Jogo                _ + 3 + 0
+
+  Não     Não    =  Utilização Geral    _ + 0 + 0
+  Não     As vez =  Video               _ + 0 + 6
+  Não     Muito  =  Video               _ + 0 + 7
+
+  As vez  As vez =  Video               _ + 1 + 6
+  
+  Muito   Muito  =  Jogo	        _ + 7 + 3
+
+
+O valor de _ é definido pelo preço: Barato, Intermediario e Premium
+
+Barato vale 10
+			BARATO
+
+JOGAR | VIDEOS |  Resp do Quiz      | Codigo Numerico
+  Não	  Não    =  Utilização Geral    10 + 0 + 0 = 10
+As vez    Não    =  Jogo                10 + 1 + 0 = 11
+ Muito    Não    =  Jogo                10 + 3 + 0 = 13
+
+  Não     Não    =  Utilização Geral    10 + 0 + 0 = 10
+  Não     As vez =  Video               10 + 0 + 6 = 16
+  Não     Muito  =  Video               10 + 0 + 7 = 17
+
+  As vez  As vez =  Video               10 + 1 + 6 = 17
+  
+  Muito   Muito  =  Jogo	        10 + 7 + 3 = 20
+
+
+
+Intermediario vale 40
+			INTERMEDIARIO
+
+JOGAR | VIDEOS |  Resp do Quiz      | Codigo Numerico
+  Não	  Não    =  Utilização Geral    40 + 0 + 0 = 40
+As vez    Não    =  Jogo                40 + 1 + 0 = 41
+ Muito    Não    =  Jogo                40 + 3 + 0 = 43
+
+  Não     Não    =  Utilização Geral    40 + 0 + 0 = 10
+  Não     As vez =  Video               40 + 0 + 6 = 46
+  Não     Muito  =  Video               40 + 0 + 7 = 47
+
+  As vez  As vez =  Video               40 + 1 + 6 = 47
+  
+  Muito   Muito  =  Jogo	        40 + 7 + 3 = 50
+
+
+
+Premium vale 80      
+                    PREMIUM
+
+JOGAR | VIDEOS |  Resp do Quiz      | Codigo Numerico
+  Não	  Não    =  Utilização Geral    80 + 0 + 0 = 80
+As vez    Não    =  Jogo                80 + 1 + 0 = 81
+ Muito    Não    =  Jogo                80 + 3 + 0 = 83
+
+  Não     Não    =  Utilização Geral    80 + 0 + 0 = 80
+  Não     As vez =  Video               80 + 0 + 6 = 86
+  Não     Muito  =  Video               80 + 0 + 7 = 87
+
+  As vez  As vez =  Video               80 + 1 + 6 = 87
+  
+  Muito   Muito  =  Jogo	        80 + 7 + 3 = 80
+   

@@ -1,7 +1,5 @@
 #corpo {
-  background-color: aliceblue;
-  /*background-image: url(./img/fundo.jpg);
-    background-image: url(Proposta.ImgFundo.jpg); */
+  background-image: url(img/maisduas.jpg);
   background-size: cover;
 }
 #logoprincipal {
@@ -51,11 +49,22 @@ p.inicio{
 }
 
 .bUm{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: auto;
   font-family: 'Courier New', Courier, monospace ;
-  /* border-radius: 20px; */
+  border-radius: 20px;
+}
+.bUm a {
+  text-decoration: none;
+
+}
+
+#bUm:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  font-style: normal;
 }
 
 /*CSS para a pagina do QUIZ*/
@@ -78,7 +87,7 @@ h2#question {
   margin-bottom: 30px;
   width: 40%;
   font-size: 32px;
-  background-color: rgba(5, 80, 151, 0.815);
+  /* background-color: rgba(5, 80, 151, 0.815); */
 }
 
 .choice-container {
@@ -88,8 +97,10 @@ h2#question {
   margin-right: auto;
   margin-bottom: 30px;
   width: 60%;
-  font-size: 1.8rem;
-  background-color: rgba(5, 80, 151, 0.815);
+  font-size: 1.7rem;
+
+  border-radius: 15px;
+  /* background-color: rgba(5, 80, 151, 0.815); */
 }
 
 .choice-container:hover {
@@ -134,7 +145,7 @@ transition: transform 150ms;
   padding: 5px;
   
 }
-#versite a{
+#versite a {
   color: black;
   text-decoration: none;
 }
@@ -151,4 +162,34 @@ transition: transform 150ms;
   transform: translateY(-0.1rem);
   transition: transform 150ms;
   font-style: normal;
+}
+
+/* Sobre nós */
+
+.fotoSobre{
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+#foto1{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin-right: 150px;
+  float:left; 
+ 
+}
+
+#foto2{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin: auto;
+  
+}
+
+#foto3{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin-right: 150px;
+  float: right;
 }

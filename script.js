@@ -11,7 +11,7 @@ let questionCounter = 0;
 let availableQuesions = [];
 let modelo = document.querySelector(".card-title");
 let foto = document.querySelector(".foto");
-let texto = document.querySelector(".card-text")
+let texto = document.querySelector(".card-text");
 
 // As perguntas a serem usadas
 let questions = [

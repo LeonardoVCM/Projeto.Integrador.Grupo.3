@@ -86,7 +86,7 @@ h2#question {
   margin-bottom: 30px;
   width: 60%;
   font-size: 1.7rem;
-  
+
   border-radius: 15px;
   /* background-color: rgba(5, 80, 151, 0.815); */
 }
@@ -119,4 +119,34 @@ transition: transform 150ms;
   margin-left: 5vw;
   margin-right: 5vw;
   
+}
+
+/* Sobre nós */
+
+.fotoSobre{
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+#foto1{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin-right: 150px;
+  float:left; 
+ 
+}
+
+#foto2{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin: auto;
+  
+}
+
+#foto3{
+  margin-top: 50px;
+  margin-bottom: 150px;
+  margin-right: 150px;
+  float: right;
 }

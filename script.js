@@ -1,4 +1,4 @@
-// Neste documento uso o texto html para fazer a contagem do elemnto javascript.
+// Neste documento uso o texto html para fazer a contagem do elemento javascript.
 
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));

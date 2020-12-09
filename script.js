@@ -9,6 +9,9 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+let modelo = document.querySelector(".card-title");
+let foto = document.querySelector(".foto");
+let texto = document.querySelector(".card-text")
 
 // As perguntas a serem usadas
 let questions = [
@@ -71,43 +74,79 @@ getNewQuestion = () => {
         //BARATO
         if (score == 10) {
             //alert("Geral Barato")
-            document.getElementById("gb").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "LG K41s";
+            foto.innerHTML += '<img class="card-img-top" src="img/LG k41s.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para o dia-a-dia!</strong> Possui tecnologia de leitor de digitais e 3 GB de RAM que vão garantir seus aplicativos mais leves, como redes sociais, rodando com tranquilidade em segundo plano!"
+
         }
         if (score ==  11 || score == 13 || score == 19 || score == 20) {
             //alert("Jogo Barato");
-            document.getElementById("jb").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Asus Zenfone Max M3";
+            foto.innerHTML += '<img class="card-img-top" src="img/TESTEM3.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para jogos!</strong> Com um ótimo processador para a categoria e incríveis 4GB de RAM, é o melhor celular custo-benefício para quem adora jogar!"
         }
         if (score == 16 || score == 17 || score == 18) {
             //alert("Video Barato");
-            document.getElementById("vb").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Samsung Galaxy A10";
+            foto.innerHTML += '<img class="card-img-top" src="img/Galaxy a10.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para ver vídeos!</strong> Com uma boa qualidade de tela e resolução, é uma ótima opção de celular custo-benefício, além de possuir uma poderosa bateria para a categoria!"
         }
         //MEDIO
         if (score == 40) {
             //alert("Geral Medio");
-            document.getElementById("gm").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Moto G8 Plus";
+            foto.innerHTML += '<img class="card-img-top" src="img/moto g8 plus.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para o dia-a-dia!</strong> Com um excelente processador para a categoria e 4 GB de RAM, é mais do que capaz de manter seus aplicativos rodando em segundo plano!"
         }
         if (score == 41 || score == 43 || score == 49 || score == 50) {
             //alert("Jogo Medio");
-            document.getElementById("jm").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Xiaomi Redmi Note 8 Pro";
+            foto.innerHTML += '<img class="card-img-top" src="img/Note 8 pro.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para jogos!</strong> Com o poderoso processador Helio G90T e equipado com 6 GB de RAM, é o celular intermediário com o melhor desempenho em jogos, até mesmo pesados!"
         }
         if (score == 46 || score == 47 || score == 48) {
             //alert("Video Medio");
-            document.getElementById("vm").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Samsung Galaxy M31";
+            foto.innerHTML += '<img class="card-img-top" src="img/Galaxy m31.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para vídeos!</strong> Com uma tela Super AMOLED de altíssima qualidade, 6 GB de RAM, muito armazenamento, uma excelente câmera e uma bateria incrível, é uma das melhores opções custo-benefício!"
         }
         //CARO
         if (score == 80) {
             //alert("Geral Caro");
-            document.getElementById("gc").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Iphone 11";
+            foto.innerHTML += '<img class="card-img-top" src="img/Iphone 11.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para o dia-a-dia!</strong> Com a conhecida qualidade da Apple e a otimização do sistema operacional IOS para seus aparelhos, é garantia de um excelente desempenho para as atividades cotidianas!"
         }
         if (score == 81 || score == 83 || score == 89 || score == 90) {
             //alert("Jogo Caro");
-            document.getElementById("jc").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Motorola Edge";
+            foto.innerHTML += '<img class="card-img-top" src="img/Motorola Edge.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para jogos!</strong> Com um poderoso processador e uma tela de altíssima qualidade, é o smartphone ideal para quem adora jogar. Além disso é o primeiro com a tecnologia 5G, pronto para o futuro!"
         }
         if (score == 86 || score == 87 || score == 88) {
             //alert("Video Caro");
-            document.getElementById("vc").removeAttribute("style"); 
+            document.querySelector(".rs").removeAttribute("style");
+            modelo.innerText += "Samsung Galaxy S20 Plus";
+            foto.innerHTML += '<img class="card-img-top" src="img/Galaxy s20 plus.jpg" widht="325" height="275"/>';
+            texto.innerHTML += "<strong>Ideal para vídeos!</strong> Com uma impressionante tela Dinamyc AMOLED de 6.7' é a melhor alternativa na categoria pra quem adora assistir vídeos, filmes e séries no smartphone! Além de um excelente processador e muita memória RAM."
         }
 
+        fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${modelo.innerText}`)
+    .then(response => response.json())
+    .then(response => {
+
+        let preco = document.querySelector("#precoresultado")
+        preco.innerHTML += `<p id="cifrao"><strong>Melhor preço: R$ ${response.results[0].price}</strong> <button id="versite"><a href="${response.results[0].permalink}">Ver no site</a></button></p>`
+
+      })
         
     }
     questionCounter++;

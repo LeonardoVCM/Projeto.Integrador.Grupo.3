@@ -104,8 +104,6 @@ h2#question {
   /* background-color: rgba(5, 80, 151, 0.815); */
 }
 
-
-
 @media (hover: hover) and (pointer: fine) {
   .choice-container:hover {
     cursor: pointer;
@@ -119,6 +117,16 @@ h2#question {
   .choice-container{
     box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
   }
+}
+
+#textoProjeto{
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#textSn{
+  font-size: 25px;
 }
 
 #tituloTeste {

@@ -104,11 +104,39 @@ h2#question {
   /* background-color: rgba(5, 80, 151, 0.815); */
 }
 
-.choice-container:hover {
-cursor: pointer;
-box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
-transform: translateY(-0.1rem);
-transition: transform 150ms;
+
+
+@media (hover: hover) and (pointer: fine) {
+  .choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    }
+}
+
+@media (max-width: 1024px){
+  .choice-container{
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(11, 133, 194, 0.849);
+  }
+}
+
+#tituloTeste {
+  text-align: center;
+}
+
+h2#question {
+  margin: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: auto;
+}
+
+.choice-container{
+  margin: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: auto;
 }
 
 .choice-text {

@@ -119,17 +119,6 @@ h2#question {
   }
 }
 
-#textoProjeto{
-  box-sizing: border-box;
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-#textSn{
-  font-size: 25px;
-  line-height: 50px;
-}
-
 #tituloTeste {
   text-align: center;
 }
@@ -209,30 +198,31 @@ h2#question {
 
 /* Sobre nós */
 
-.fotoSobre{
-  border-radius: 100px;
-  width: 150px;
-  height: 150px;
+.textoProjeto{
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Noticia Text', serif; */
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 
-#foto1{
-  margin-top: 50px;
-  margin-bottom: 150px;
-  margin-right: 150px;
-  float:left; 
- 
-}
-
-#foto2{
-  margin-top: 50px;
-  margin-bottom: 150px;
-  margin: auto;
+#textSn{
+  font-size: 25px;
+  line-height: 50px;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Righteous', cursive; */
   
 }
 
-#foto3{
-  margin-top: 50px;
-  margin-bottom: 150px;
-  margin-right: 150px;
-  float: right;
+#text2{
+  font-size: 25px;
+  line-height: 50px;
+  font-family: 'Bree Serif', serif;
+}
+
+#text3{
+  font-size: 25px;
+  line-height: 50px;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Fredoka One', cursive; */
 }

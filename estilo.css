@@ -162,6 +162,12 @@ h2#question {
   width: 40vw;
   height: 60vh;
 }
+
+#result{
+  background-color: white;
+  
+}
+
 #textoresultado {
   font-size: 12px;
 }
